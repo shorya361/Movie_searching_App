@@ -1,0 +1,26 @@
+<%- include("partials/header")%>
+
+
+    <div class="container">
+        <h1 style="text-align:center" style="margin-top: 20px;">SEARCH RESULT</h1>
+        
+            <div class="row " style="margin-top: 20px;">
+                <% data.Search.forEach(function(movie){%>
+                <div class="col-12  col-lg-4   col-mb-3">
+                    <div class="card" style=" margin-top: 15px;">
+                        <img src="<%= movie.Poster %>" class="card-img-top" style="height:500px" >
+                        <div class="card-body">
+                        <h5 class="card-title"><strong>Name-</strong><%= movie.Title %></h5>
+                        <p class="card-text"> <strong>Year-<%= movie.Year%> </strong></p>
+                       
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+            </div>
+        
+        <a href="/" type="button " class="btn btn-outline-info" style="margin-top: 10px; margin-bottom: 5em; margin-left: 28em;">back to home</a> 
+        <br>
+    </div>
+   
+<%- include("partials/footer")%>
